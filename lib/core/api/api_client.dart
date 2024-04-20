@@ -1,3 +1,5 @@
+
+
 import 'package:dio/dio.dart';
 
 import '../../common/constants/api_constants.dart';
@@ -7,9 +9,9 @@ class ApiClient {
 
   BaseOptions options = BaseOptions(
     baseUrl: ApiConstants.BASE_URL,
-    connectTimeout: ApiConstants.CONNECTION_TIMEOUT,
-    receiveTimeout: ApiConstants.RECIEVE_TIMEOUT,
-    headers: {"Content-Type": "application/json; charset=utf-8"},
+    connectTimeout: Duration(seconds: 5),
+    receiveTimeout: Duration(seconds: 3),
+    headers: {"Content-Type": "application/json"},
   );
 
   Dio getDio() {

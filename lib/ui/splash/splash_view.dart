@@ -12,9 +12,10 @@ class SplashView extends StatelessWidget {
         viewModelBuilder: () => SplashViewModel(),
         onModelReady: (model) => model.init(context),
         builder: (context, model, widget) {
-          return SplashView(
-
-          );
+          return
+            Scaffold(body: Center(child:
+          Text("TikTok\nFlutter", style: Theme.of(context).textTheme.headline1)));
+     
         });
   }
  
